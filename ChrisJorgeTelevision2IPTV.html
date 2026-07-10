@@ -4,191 +4,365 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ChrisJorgeTelevision2-IPTV</title>
+<title>ChrisJorgeTelevision2 IPTV | Premium Entertainment</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#070b14;
-color:white;
+    background:#050816;
+    color:#fff;
+    line-height:1.6;
 }
 
-header{
-background:linear-gradient(135deg,#001aff,#00d9ff);
-padding:70px 20px;
-text-align:center;
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,22,.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
+
+.brand{
+    font-size:24px;
+    font-weight:800;
+    color:#00d9ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+    background:
+    radial-gradient(circle at top,#0066ff 0%,transparent 35%),
+    linear-gradient(135deg,#020617,#0f172a);
+}
+
 
 .logo{
-width:250px;
-max-width:90%;
-margin-bottom:25px;
-filter:drop-shadow(0 0 15px #000);
+    width:260px;
+    max-width:90%;
+    margin-bottom:30px;
+    filter:drop-shadow(0 0 25px #00d9ff);
 }
 
-h1{
-font-size:50px;
-margin-bottom:15px;
+
+.hero h1{
+    font-size:55px;
+    font-weight:800;
+    line-height:1.2;
 }
 
-header p{
-font-size:22px;
+
+.hero span{
+    color:#00d9ff;
 }
+
+
+.hero p{
+    max-width:750px;
+    margin:20px auto;
+    font-size:20px;
+    color:#cbd5e1;
+}
+
 
 .btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:white;
-color:#004cff;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-transition:.3s;
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    color:white;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    box-shadow:0 10px 30px rgba(0,217,255,.3);
+    transition:.3s;
 }
+
 
 .btn:hover{
-background:#000;
-color:white;
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,217,255,.5);
 }
 
+
+
+/* SECTIONS */
 
 section{
-padding:70px 10%;
+    padding:90px 8%;
 }
 
 
-h2{
-text-align:center;
-font-size:40px;
-margin-bottom:40px;
-color:#00d9ff;
+.title{
+    text-align:center;
+    margin-bottom:50px;
 }
 
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.title h2{
+    font-size:42px;
+    color:#00d9ff;
+}
+
+
+.title p{
+    color:#94a3b8;
+}
+
+
+/* FEATURES */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 
 .card{
-background:#111827;
-padding:30px;
-border-radius:20px;
-text-align:center;
-border:1px solid #1e40af;
-transition:.3s;
+    background:rgba(15,23,42,.8);
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid rgba(0,217,255,.2);
+    transition:.3s;
 }
 
 
 .card:hover{
-transform:translateY(-10px);
+    transform:translateY(-10px);
+    border-color:#00d9ff;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+
+.icon{
+    font-size:45px;
+    margin-bottom:20px;
 }
 
 
 .card h3{
-color:#00d9ff;
-margin-bottom:15px;
+    color:#00d9ff;
+    margin-bottom:15px;
+}
+
+
+.card p{
+    color:#cbd5e1;
 }
 
 
 
+/* PRICING */
+
 .pricing{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
 }
 
 
 .plan{
-background:#111827;
-width:300px;
-padding:35px;
-border-radius:20px;
-text-align:center;
-border:1px solid #1e40af;
+    width:310px;
+    background:#0f172a;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid rgba(0,217,255,.2);
+    transition:.3s;
+}
+
+
+.plan:hover{
+    transform:translateY(-10px);
+}
+
+
+.featured{
+    border:2px solid #00d9ff;
+    transform:scale(1.05);
 }
 
 
 .plan h3{
-font-size:28px;
+    font-size:28px;
 }
 
 
 .price{
-font-size:45px;
-color:#00d9ff;
-margin:20px;
+    font-size:50px;
+    color:#00d9ff;
+    margin:20px;
 }
 
 
 .plan ul{
-list-style:none;
+    list-style:none;
 }
 
 
 .plan li{
-margin:12px;
+    margin:12px;
+    color:#cbd5e1;
 }
 
 
-.contact{
-text-align:center;
-font-size:20px;
-line-height:2;
+.badge{
+    background:#00d9ff;
+    color:#001;
+    padding:6px 20px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:bold;
+}
+<style>
+
+/* FAQ */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+
+.question{
+    background:#0f172a;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:20px;
+    border:1px solid rgba(0,217,255,.15);
+}
+
+
+.question h3{
+    color:#00d9ff;
+    margin-bottom:10px;
+}
+
+
+.question p{
+    color:#cbd5e1;
+}
+
+
+
+/* CONTACT */
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#0f172a;
+    padding:45px;
+    border-radius:30px;
+    border:1px solid rgba(0,217,255,.2);
+}
+
+
+.contact-box p{
+    font-size:20px;
+    margin:15px;
+    color:#cbd5e1;
 }
 
 
 .highlight{
-color:#00d9ff;
+    color:#00d9ff;
+    font-weight:600;
 }
 
 
 
-.faq{
-max-width:800px;
-margin:auto;
-}
-
-
-.faq p{
-background:#111827;
-padding:20px;
-margin:15px 0;
-border-radius:15px;
-}
-
-
+/* FOOTER */
 
 footer{
-background:#020617;
-padding:30px;
-text-align:center;
-color:#aaa;
+    background:#020617;
+    text-align:center;
+    padding:35px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
 
 
-@media(max-width:700px){
+/* MOBILE */
 
-h1{
-font-size:35px;
+@media(max-width:800px){
+
+nav{
+    padding:20px;
 }
 
-header p{
-font-size:18px;
+nav div:last-child{
+    display:none;
+}
+
+
+.hero h1{
+    font-size:38px;
+}
+
+
+.hero p{
+    font-size:17px;
+}
+
+
+section{
+    padding:70px 5%;
+}
+
+
+.title h2{
+    font-size:32px;
+}
+
+
+.featured{
+    transform:none;
 }
 
 }
@@ -197,58 +371,136 @@ font-size:18px;
 
 </head>
 
-
 <body>
 
 
-<header>
+<nav>
+
+<div class="brand">
+ChrisJorgeTV
+</div>
+
+<div>
+<a href="#features">Features</a>
+<a href="#plans">Plans</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
 
 
-<img class="logo" 
+
+<header class="hero">
+
+
+<img class="logo"
 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs_uzRIhVQIEnOzUwdJ4VMVs8enOqgdXme4YG342DOi654J4vkO7IM7dVq1kTjvmCNd7pXFTkf_Oiq6UOnJPVk8xVCM0K1ePMCHge9pKa3hyphenhyphencNQydCTCtQp9BcOBO4Sgc9QmIKpyJW359NfjFuXLcAJx08eJLxLfh8luPa2pIOJXuw5SzhRdz4Q55xf7cM/s715/ChrisJorgeTelevison2%20new.png"
-alt="ChrisJorgeTelevision2-IPTV Logo">
+alt="ChrisJorgeTelevision2 IPTV">
 
 
-<h1>ChrisJorgeTelevision2-IPTV</h1>
+<h1>
+Premium <span>Entertainment</span><br>
+Anytime. Anywhere.
+</h1>
 
-<p>Premium Entertainment • Live TV • Movies • Series • HD Streaming</p>
 
-<a class="btn" href="#contact">Subscribe Now</a>
+<p>
+Enjoy live television, movies, series, sports and entertainment
+with a smooth HD streaming experience.
+</p>
+
+
+<a class="btn" href="#contact">
+Subscribe Now
+</a>
 
 
 </header>
 
 
 
-<section>
 
-<h2>Our Features</h2>
-
-
-<div class="features">
+<section id="features">
 
 
-<div class="card">
-<h3>📺 Live Channels</h3>
-<p>Enjoy live entertainment, sports, news and international channels.</p>
+<div class="title">
+
+<h2>
+Why Choose Us
+</h2>
+
+<p>
+Everything you need for premium streaming.
+</p>
+
 </div>
 
 
+
+<div class="grid">
+
+
 <div class="card">
-<h3>🎬 Movies & Series</h3>
-<p>Large video library available anytime on demand.</p>
+
+<div class="icon">📺</div>
+
+<h3>
+Live TV Channels
+</h3>
+
+<p>
+Watch entertainment, sports, news and international channels.
+</p>
+
 </div>
 
 
+
 <div class="card">
-<h3>⚡ Fast Streaming</h3>
-<p>Optimized streaming experience with HD quality.</p>
+
+<div class="icon">🎬</div>
+
+<h3>
+Movies & Series
+</h3>
+
+<p>
+Access a large collection of on-demand content.
+</p>
+
 </div>
 
 
+
 <div class="card">
-<h3>📱 All Devices</h3>
-<p>Compatible with Smart TV, Android, Firestick, phones and tablets.</p>
+
+<div class="icon">⚡</div>
+
+<h3>
+Fast Streaming
+</h3>
+
+<p>
+Enjoy reliable HD streaming with minimal buffering.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h3>
+All Devices
+</h3>
+
+<p>
+Compatible with TVs, phones, tablets and streaming devices.
+</p>
+
 </div>
 
 
@@ -259,100 +511,183 @@ alt="ChrisJorgeTelevision2-IPTV Logo">
 
 
 
-<section>
+
+<section id="plans">
 
 
-<h2>Plans & Pricing</h2>
+<div class="title">
+
+<h2>
+Plans & Pricing
+</h2>
+
+<p>
+Choose the package that works best for you.
+</p>
+
+</div>
+
 
 
 <div class="pricing">
 
 
+
 <div class="plan">
 
-<h3>1 Month</h3>
+<h3>
+1 Month
+</h3>
 
-<div class="price">$15</div>
+<div class="price">
+$15
+</div>
 
 <ul>
-<li>✔ Live TV</li>
-<li>✔ Movies</li>
-<li>✔ Series</li>
+<li>✔ Live TV Access</li>
+<li>✔ Movies Library</li>
+<li>✔ Series Collection</li>
 <li>✔ Customer Support</li>
 </ul>
 
-<a class="btn" href="#contact">Order</a>
+<a class="btn" href="#contact">
+Order
+</a>
 
 </div>
 
 
 
 
-<div class="plan">
 
-<h3>6 Months</h3>
+<div class="plan featured">
 
-<div class="price">$60</div>
+<div class="badge">
+BEST VALUE
+</div>
+
+<h3>
+6 Months
+</h3>
+
+<div class="price">
+$60
+</div>
+
 
 <ul>
 <li>✔ Premium Access</li>
 <li>✔ HD Streaming</li>
-<li>✔ VOD Library</li>
-<li>✔ Support</li>
+<li>✔ Large VOD Library</li>
+<li>✔ Priority Support</li>
 </ul>
 
-<a class="btn" href="#contact">Order</a>
+
+<a class="btn" href="#contact">
+Order
+</a>
+
 
 </div>
 
 
 
-
-
 <div class="plan">
 
-<h3>12 Months</h3>
+<h3>
+12 Months
+</h3>
 
-<div class="price">$100</div>
+<div class="price">
+$100
+</div>
+
 
 <ul>
-<li>✔ Best Value</li>
+<li>✔ Best Savings</li>
 <li>✔ All Features</li>
 <li>✔ VIP Support</li>
 <li>✔ Multiple Devices</li>
 </ul>
 
-<a class="btn" href="#contact">Order</a>
+
+<a class="btn" href="#contact">
+Order
+</a>
+
 
 </div>
 
 
 
 </div>
+
 
 </section>
+<section id="faq">
 
 
+<div class="title">
 
+<h2>
+Frequently Asked Questions
+</h2>
 
-<section>
+<p>
+Common questions about our service.
+</p>
 
+</div>
 
-<h2>FAQ</h2>
 
 
 <div class="faq">
 
-<p><b>What devices are supported?</b><br>
-Smart TVs, Android devices, Firestick, tablets and phones.</p>
+
+<div class="question">
+
+<h3>
+What devices are supported?
+</h3>
+
+<p>
+Our service works with Smart TVs, Android devices, Firestick,
+tablets, and mobile phones.
+</p>
+
+</div>
 
 
-<p><b>How fast is activation?</b><br>
-Accounts are activated after confirmation of payment.</p>
 
 
-<p><b>Do you offer support?</b><br>
-Yes, customer support is available for setup assistance.</p>
+<div class="question">
+
+<h3>
+How fast is activation?
+</h3>
+
+<p>
+Accounts are activated after payment confirmation and setup details
+are provided.
+</p>
+
+</div>
+
+
+
+
+<div class="question">
+
+<h3>
+Do you provide setup support?
+</h3>
+
+<p>
+Yes. Customer support is available to help with installation and
+configuration.
+</p>
+
+</div>
 
 
 </div>
@@ -367,16 +702,55 @@ Yes, customer support is available for setup assistance.</p>
 <section id="contact">
 
 
-<h2>Contact Us</h2>
+<div class="title">
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+Ready to start streaming?
+</p>
+
+</div>
 
 
-<div class="contact">
 
-<p>Email: <span class="highlight">chrisjorgetelevison2.contact@gmail.com</span></p>
 
-<p>WhatsApp: <span class="highlight">+1 000 000 0000</span></p>
+<div class="contact-box">
 
-<p>ChrisJorgeTelevision2-IPTV</p>
+
+<p>
+📧 Email:
+<br>
+<span class="highlight">
+chrisjorgetelevison2.contact@gmail.com
+</span>
+</p>
+
+
+
+<p>
+💬 WhatsApp:
+<br>
+<span class="highlight">
++1 000 000 0000
+</span>
+</p>
+
+
+
+<p>
+ChrisJorgeTelevision2-IPTV
+</p>
+
+
+
+<a class="btn" href="mailto:chrisjorgetelevison2.contact@gmail.com">
+Contact Now
+</a>
+
+
 
 </div>
 
@@ -386,9 +760,20 @@ Yes, customer support is available for setup assistance.</p>
 
 
 
+
+
 <footer>
 
-© 2026 ChrisJorgeTelevision2-IPTV • All Rights Reserved
+
+<p>
+© 2026 ChrisJorgeTelevision2-IPTV
+</p>
+
+
+<p>
+Premium Entertainment • Live TV • Movies • Series
+</p>
+
 
 </footer>
 
